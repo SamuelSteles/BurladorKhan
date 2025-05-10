@@ -487,7 +487,7 @@ async function initApp() {
     await Core.loadExternalLibraries();
     UI.init();
     Core.init();
-    console.log(`KhanDestroyer v${APP.ver} iniciado com sucesso!`);
+    console.log(`BurladorKhan v${APP.ver} iniciado com sucesso!`);
     sendToast(`✅ BurladorKhan v${APP.ver} iniciado!`, 3000);
   } catch (error) {
     console.error("Erro ao inicializar KhanDestroyer:", error);
