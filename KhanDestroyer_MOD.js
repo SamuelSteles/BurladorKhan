@@ -1,7 +1,10 @@
-console.log("%cKHAN DESTROYER MODIFICADO POR BISCURIM", "color: white; background: black; font-size: 20px; padding: 10px;");
+
+console.log("Obrigado Por Usar!", "color: white; background: black; font-size: 20px; padding: 10px;");
 const APP = {
   ver: "1.2.0",
-  user: { id: 0 },
+  user: {
+    id: 0
+  },
   cfg: {
     mod: true,
     auto: false,
@@ -10,6 +13,45 @@ const APP = {
     autoSpeed: 750,
     speedOptions: [750, 1000, 1250, 1500]
   }
+};
+
+// Load external libraries
+async function loadScript(url) {
+  const response = await fetch(url);
+  const script = await response.text();
+  eval(script);
+}
+
+async function loadCss(url) {
+  return new Promise(resolve => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = url;
+    link.onload = resolve;
+    document.head.appendChild(link);
+  });
+}
+
+// Toast notification function
+function sendToast(message, duration = 5000, position = "bottom") {
+  if (typeof Toastify !== 'undefined') {
+    Toastify({
+      text: message,
+      duration,
+      gravity: position,
+      position: "center",
+      stopOnFocus: true,
+      style: { background: "#000000" }
+    }).showToast();
+  } else {
+    console.log("Toast:", message);
+  }
+}
+
+// Audio player function
+const playAudio = src => {
+  new Audio(src).play();
 };
 
 class UI {
@@ -31,9 +73,8 @@ class UI {
       border: "1px solid #333",
       maxWidth: "90%"
     });
-
     _0x3d849d.innerHTML = `
-<style>
+            <style>
                 .khandestroyer-header {
                     color: white;
                     font-size: 18px;
@@ -179,7 +220,7 @@ class UI {
                 }
             </style>
             <div class="khandestroyer-header">
-                KhanDestroyer <span class="khandestroyer-version">${APP.ver}</span>
+                BurladorKhan <span class="khandestroyer-version">${APP.ver}</span>
             </div>
             <div class="khandestroyer-content">
                 <div class="khandestroyer-opt">
@@ -212,9 +253,9 @@ class UI {
                         </div>
                     </div>
                 </div>
-                <div class="khandestroyer-credit">by Biscurim</div>
+                <div class="khandestroyer-credit">BurladorKhan V.1</div>
             </div>
-    `;
+        `;
     document.body.appendChild(_0x3d849d);
     
     // Adicionar evento de clique ao cabeçalho para encolher/expandir o menu
@@ -230,7 +271,7 @@ class UI {
       localStorage.setItem('khanDestroyer-collapsed', isCollapsed);
       
       // Mostrar toast informativo
-      sendToast(isCollapsed ? "Menu recolhido" : "Menu expandido", 1000);
+      sendToast(isCollapsed ? "🔼 Menu recolhido" : "🔽 Menu expandido", 1000);
     });
     
     // Verificar se o menu estava recolhido anteriormente
@@ -244,7 +285,7 @@ class UI {
     document.getElementById("autoCheck").onchange = event => {
       APP.cfg.auto = event.target.checked;
       document.getElementById("speedControlContainer").style.display = APP.cfg.auto ? "flex" : "none";
-      sendToast(APP.cfg.auto ? "✅ Completar Automatico Ativado" : "❌ Completar Automatico Desativado", 2000);
+      sendToast(APP.cfg.auto ? "✅ Preenchimento automático ativado" : "❌ Preenchimento automático desativado", 2000);
     };
     
     // Configurar o slider de velocidade
@@ -267,13 +308,13 @@ class UI {
     speedSlider.onchange = () => {
       const index = parseInt(speedSlider.value);
       const speed = APP.cfg.speedOptions[index];
-      sendToast(`⏱️ Velocidade alterada para ${speed}ms`, 2000);
+      sendToast(`Velocidade alterada para ${speed}ms`, 2000);
     };
 
     
     document.getElementById("spoofCheck").onchange = event => {
       APP.cfg.questionSpoof = event.target.checked;
-      sendToast(APP.cfg.questionSpoof ? "✅ Question Spoof Ativada" : "❌ Question Spoof Desativada", 2000);
+      sendToast(APP.cfg.questionSpoof ? "✅ Pergunta Spoof habilitada" : "❌ Pergunta Spoof desabilitada", 2000);
     };
     
     document.getElementById("darkModeCheck").onchange = event => {
@@ -281,10 +322,10 @@ class UI {
       if (typeof DarkReader !== 'undefined') {
         if (APP.cfg.darkMode) {
           DarkReader.enable();
-          sendToast("🌑 Modo Escuro Enabled", 2000);
+          sendToast("🌑 Modo Escuro Ativado", 2000);
         } else {
           DarkReader.disable();
-          sendToast("☀️ Modo Escuro Disabled", 2000);
+          sendToast("☀️ Modo Escuro Desativado", 2000);
         }
       } else {
         console.error("DarkReader não está disponível");
@@ -324,20 +365,21 @@ class Core {
       
       // Verificar se Toastify foi carregado antes de usar
       if (typeof Toastify !== 'undefined') {
-        sendToast("✅ Script carregado com sucesso!");
+        sendToast("🤖 Script Carregado Com Sucesso!!");
       } else {
-        console.error("Toastify não foi carregado corretamente");
+        console.error("Toastify não carregou corretamente");
       }
       
       console.clear();
     } catch (error) {
-      console.error("Erro ao carregar bibliotecas externas:", error);
+      console.error("Bibliotecas externas não carregou corretamente:", error);
     }
   }
   
   static setupMod() {
     const messages = [
-      "❗ Versão Criada Por [@Biscurim](https://guns.lol/biscurim)."
+      "Obrigado Por Usar :)",
+      "Feito Por: [@Biscurim](https://guns.lol/biscurim)."
     ];
     
     const originalFetch = window.fetch;
@@ -380,7 +422,7 @@ class Core {
             };
             
             _0x3cbec8.data.assessmentItem.item.itemData = JSON.stringify(_0x3ca1c5);
-            sendToast("🔓 Pergunta ignorada", 1000);
+            sendToast("🔓 Question Bypassed", 1000);
             
             const _0x1aa163 = {
               status: _0x238f50.status,
@@ -407,7 +449,7 @@ class Core {
       if (element) {
         element.click();
         if (element.textContent === "Mostrar resumo") {
-          sendToast("🎉 Exercicio completado!", 3000);
+          sendToast("🍀 Exercicio Completado!", 3000);
           playAudio("https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/4x5g14gj.wav");
         }
       }
@@ -447,10 +489,10 @@ async function initApp() {
     UI.init();
     Core.init();
     console.log(`BurladorKhan v${APP.ver} iniciado com sucesso!`);
-    sendToast(`✅ BurladorKhan v${APP.ver} iniciado!`, 3000);
+    sendToast(`🍀 BurladorKhan v${APP.ver} iniciado!`, 3000);
   } catch (error) {
-    console.error("Erro ao inicializar KhanDestroyer:", error);
-    sendToast("⚠️ Erro ao inicializar BurladorKhan", 5000);
+    console.error("BurladorKhan Error:", error);
+    sendToast("🍀 Erro ao iniciar BurladorKhan", 5000);
   }
 }
 
