@@ -224,14 +224,14 @@ class UI {
             </div>
             <div class="khandestroyer-content">
                 <div class="khandestroyer-opt">
-                    <span>Realizar Automatico</span>
+                    <span>Concluir Automatico</span>
                     <label class="switch">
                         <input type="checkbox" id="autoCheck">
                         <span class="slider"></span>
                     </label>
                 </div>
                 <div class="khandestroyer-opt">
-                    <span>Pergunta Falsa</span>
+                    <span>Perguntas Falsa</span>
                     <label class="switch">
                         <input type="checkbox" id="spoofCheck" checked>
                         <span class="slider"></span>
