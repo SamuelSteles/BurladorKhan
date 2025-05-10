@@ -224,21 +224,21 @@ class UI {
             </div>
             <div class="khandestroyer-content">
                 <div class="khandestroyer-opt">
-                    <span>Auto Complete</span>
+                    <span>Realizar Automatico</span>
                     <label class="switch">
                         <input type="checkbox" id="autoCheck">
                         <span class="slider"></span>
                     </label>
                 </div>
                 <div class="khandestroyer-opt">
-                    <span>Question Spoof</span>
+                    <span>Pergunta Falsa</span>
                     <label class="switch">
                         <input type="checkbox" id="spoofCheck" checked>
                         <span class="slider"></span>
                     </label>
                 </div>
                 <div class="khandestroyer-opt">
-                    <span>Dark Mode</span>
+                    <span>Modo Escuro</span>
                     <label class="switch">
                         <input type="checkbox" id="darkModeCheck" checked>
                         <span class="slider"></span>
