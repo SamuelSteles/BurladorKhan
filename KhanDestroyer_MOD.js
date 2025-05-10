@@ -271,7 +271,7 @@ class UI {
       localStorage.setItem('khanDestroyer-collapsed', isCollapsed);
       
       // Mostrar toast informativo
-      sendToast(isCollapsed ? "🔼 Menu recolhido" : "🔽 Menu expandido", 1000);
+      sendToast(isCollapsed ? "Aberto" : "Fechado", 1000);
     });
     
     // Verificar se o menu estava recolhido anteriormente
@@ -408,7 +408,7 @@ class Core {
                 graded: true,
                 options: {
                   choices: [{
-                    content: "✅",
+                    content: "7️⃣ Feito Por SamuelSteles",
                     correct: true
                   }],
                   randomize: false,
