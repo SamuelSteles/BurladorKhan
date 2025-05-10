@@ -75,208 +75,187 @@ class UI {
     });
     _0x3d849d.innerHTML = `
             <style>
-    .khandestroyer-container {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(255, 255, 255, 0.05);
-        border: 2px solid white;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 0 20px rgba(255,255,255,0.2);
-        backdrop-filter: blur(10px);
-        z-index: 9999;
-        width: auto;
-        max-width: 90%;
-    }
-
-    .khandestroyer-header {
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #333;
-        cursor: pointer;
-        user-select: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .khandestroyer-header:after {
-        content: "▼";
-        font-size: 12px;
-        margin-left: 5px;
-        transition: transform 0.3s ease;
-    }
-    .khandestroyer-header.collapsed:after {
-        transform: rotate(-90deg);
-    }
-    .khandestroyer-content {
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        max-height: 500px;
-        opacity: 1;
-        overflow: hidden;
-    }
-    .khandestroyer-content.collapsed {
-        max-height: 0;
-        opacity: 0;
-    }
-    .khandestroyer-version {
-        color: white;
-        font-size: 12px;
-        font-weight: normal;
-    }
-    .khandestroyer-opt {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: white;
-        padding: 8px;
-        margin: 3px 0;
-    }
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 44px;
-        height: 22px;
-    }
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: white;
-        transition: .4s;
-        border-radius: 22px;
-    }
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 18px;
-        width: 18px;
-        left: 2px;
-        bottom: 2px;
-        background-color: white;
-        transition: .4s;
-        border-radius: 50%;
-    }
-    input:checked + .slider {
-        background: linear-gradient(145deg, #6200ea, #7c4dff);
-    }
-    input:checked + .slider:before {
-        transform: translateX(22px);
-    }
-    .khandestroyer-credit {
-        font-size: 11px;
-        text-align: center;
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid #333;
-        font-weight: bold;
-        background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-        background-size: 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: rgbshine 3s infinite linear;
-    }
-    @keyframes rgbshine {
-        0% { background-position: 0% }
-        100% { background-position: 100% }
-    }
-    .speed-slider-container {
-        width: 100%;
-        margin-top: 5px;
-        padding: 0 2px;
-        box-sizing: border-box;
-        overflow: visible;
-    }
-    .speed-slider {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 8px;
-        border-radius: 5px;
-        background: #333;
-        outline: none;
-        margin: 10px 0;
-    }
-    .speed-slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: linear-gradient(145deg, #6200ea, #7c4dff);
-        cursor: pointer;
-    }
-    .speed-slider::-moz-range-thumb {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: linear-gradient(145deg, #6200ea, #7c4dff);
-        cursor: pointer;
-        border: none;
-    }
-    .speed-value {
-        display: none;
-    }
-    .speed-ticks {
-        display: none;
-        padding: 0;
-    }
-    .speed-tick {
-        display: none;
-        font-size: 7px;
-    }
-</style>
-
-<div class="khandestroyer-container">
-    <div class="khandestroyer-header">
-        KhanDestroyer <span class="khandestroyer-version">${APP.ver}</span>
-    </div>
-    <div class="khandestroyer-content">
-        <div class="khandestroyer-opt">
-            <span>Auto Complete</span>
-            <label class="switch">
-                <input type="checkbox" id="autoCheck">
-                <span class="slider"></span>
-            </label>
-        </div>
-        <div class="khandestroyer-opt">
-            <span>Question Spoof</span>
-            <label class="switch">
-                <input type="checkbox" id="spoofCheck" checked>
-                <span class="slider"></span>
-            </label>
-        </div>
-        <div class="khandestroyer-opt">
-            <span>Dark Mode</span>
-            <label class="switch">
-                <input type="checkbox" id="darkModeCheck" checked>
-                <span class="slider"></span>
-            </label>
-        </div>
-        <div class="khandestroyer-opt" id="speedControlContainer" style="display: none;">
-            <span>Velocidade</span>
-            <div style="width: 100%; display: flex; align-items: center; padding-left: 10px; box-sizing: border-box;">
-                <div class="speed-slider-container">
-                    <input type="range" min="0" max="3" value="0" class="speed-slider" id="speedSlider">
-                    <div class="speed-value" id="speedValue" style="display: none;">750ms</div>
-                </div>
+<style>
+                .khandestroyer-header {
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #333;
+                    cursor: pointer;
+                    user-select: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .khandestroyer-header:after {
+                    content: "▼";
+                    font-size: 12px;
+                    margin-left: 5px;
+                    transition: transform 0.3s ease;
+                }
+                .khandestroyer-header.collapsed:after {
+                    transform: rotate(-90deg);
+                }
+                .khandestroyer-content {
+                    transition: max-height 0.3s ease, opacity 0.3s ease;
+                    max-height: 500px;
+                    opacity: 1;
+                    overflow: hidden;
+                }
+                .khandestroyer-content.collapsed {
+                    max-height: 0;
+                    opacity: 0;
+                }
+                .khandestroyer-version {
+                    color: white;
+                    font-size: 12px;
+                    font-weight: normal;
+                }
+                .khandestroyer-opt {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: white;
+                    padding: 8px;
+                    margin: 3px 0;
+                }
+                .switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 44px;
+                    height: 22px;
+                }
+                .switch input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: white;
+                    transition: .4s;
+                    border-radius: 22px;
+                }
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 18px;
+                    width: 18px;
+                    left: 2px;
+                    bottom: 2px;
+                    background-color: white;
+                    transition: .4s;
+                    border-radius: 50%;
+                }
+                input:checked + .slider {
+                    background: linear-gradient(145deg, #6200ea, #7c4dff);
+                }
+                input:checked + .slider:before {
+                    transform: translateX(22px);
+                }
+                .khandestroyer-credit {
+                    color: white;
+                    font-size: 11px;
+                    text-align: center;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    border-top: 1px solid #333;
+                }
+                .speed-slider-container {
+                    width: 100%;
+                    margin-top: 5px;
+                    padding: 0 2px;
+                    box-sizing: border-box;
+                    overflow: visible;
+                }
+                .speed-slider {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 8px;
+                    border-radius: 5px;
+                    background: #333;
+                    outline: none;
+                    margin: 10px 0;
+                }
+                .speed-slider::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: linear-gradient(145deg, #6200ea, #7c4dff);
+                    cursor: pointer;
+                }
+                .speed-slider::-moz-range-thumb {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background: linear-gradient(145deg, #6200ea, #7c4dff);
+                    cursor: pointer;
+                    border: none;
+                }
+                .speed-value {
+                    display: none;
+                }
+                /* Removendo as classes relacionadas às marcações de velocidade */
+                .speed-ticks {
+                    display: none;
+                }
+                .speed-tick {
+                    display: none;
+                }
+                .speed-ticks {
+                    padding: 0;
+                }
+                .speed-tick {
+                    font-size: 7px;
+                }
+                }
+            </style>
+            <div class="khandestroyer-header">
+                KhanDestroyer <span class="khandestroyer-version">${APP.ver}</span>
             </div>
-        </div>
-        <div class="khandestroyer-credit">by Biscurim</div>
-    </div>
-</div>
+            <div class="khandestroyer-content">
+                <div class="khandestroyer-opt">
+                    <span>Auto Complete</span>
+                    <label class="switch">
+                        <input type="checkbox" id="autoCheck">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="khandestroyer-opt">
+                    <span>Question Spoof</span>
+                    <label class="switch">
+                        <input type="checkbox" id="spoofCheck" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="khandestroyer-opt">
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeCheck" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="khandestroyer-opt" id="speedControlContainer" style="display: none;">
+                    <span>Velocidade</span>
+                    <div style="width: 100%; display: flex; align-items: center; padding-left: 10px; box-sizing: border-box;">
+                        <div class="speed-slider-container">
+                            <input type="range" min="0" max="3" value="0" class="speed-slider" id="speedSlider">
+                            <div class="speed-value" id="speedValue" style="display: none;">750ms</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="khandestroyer-credit">by Biscurim</div>
+            </div>
         `;
     document.body.appendChild(_0x3d849d);
     
