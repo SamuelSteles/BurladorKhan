@@ -42,7 +42,7 @@ function sendToast(message, duration = 5000, position = "bottom") {
       gravity: position,
       position: "center",
       stopOnFocus: true,
-      style: { background: "#000000" }
+      style: { background: "#4d4d4d" }
     }).showToast();
   } else {
     console.log("Toast:", message);
