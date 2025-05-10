@@ -155,7 +155,7 @@ class UI {
                     border-radius: 50%;
                 }
                 input:checked + .slider {
-                    background: linear-gradient(145deg, #6200ea, #7c4dff);
+                    background: linear-gradient(145deg, #ffffff, #919191);
                 }
                 input:checked + .slider:before {
                     transform: translateX(22px);
@@ -190,14 +190,14 @@ class UI {
                     width: 18px;
                     height: 18px;
                     border-radius: 50%;
-                    background: linear-gradient(145deg, #6200ea, #7c4dff);
+                    background: linear-gradient(145deg, #ffffff, #919191);
                     cursor: pointer;
                 }
                 .speed-slider::-moz-range-thumb {
                     width: 18px;
                     height: 18px;
                     border-radius: 50%;
-                    background: linear-gradient(145deg, #6200ea, #7c4dff);
+                    background: linear-gradient(145deg, #ffffff, #919191);
                     cursor: pointer;
                     border: none;
                 }
