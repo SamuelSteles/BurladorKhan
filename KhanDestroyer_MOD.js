@@ -253,7 +253,7 @@ class UI {
                         </div>
                     </div>
                 </div>
-                <div class="khandestroyer-credit">by iUnknownBr</div>
+                <div class="khandestroyer-credit">by Biscurim</div>
             </div>
         `;
     document.body.appendChild(_0x3d849d);
@@ -271,7 +271,7 @@ class UI {
       localStorage.setItem('khanDestroyer-collapsed', isCollapsed);
       
       // Mostrar toast informativo
-      sendToast(isCollapsed ? "🔼 Menu recolhido" : "🔽 Menu expandido", 1000);
+      sendToast(isCollapsed ? "Menu recolhido" : "Menu expandido", 1000);
     });
     
     // Verificar se o menu estava recolhido anteriormente
@@ -285,7 +285,7 @@ class UI {
     document.getElementById("autoCheck").onchange = event => {
       APP.cfg.auto = event.target.checked;
       document.getElementById("speedControlContainer").style.display = APP.cfg.auto ? "flex" : "none";
-      sendToast(APP.cfg.auto ? "✅ Auto Complete Enabled" : "❌ Auto Complete Disabled", 2000);
+      sendToast(APP.cfg.auto ? "✅ Completar Automatico Ativado" : "❌ Completar Automatico Desativado", 2000);
     };
     
     // Configurar o slider de velocidade
@@ -322,14 +322,14 @@ class UI {
       if (typeof DarkReader !== 'undefined') {
         if (APP.cfg.darkMode) {
           DarkReader.enable();
-          sendToast("🌑 Dark Mode Enabled", 2000);
+          sendToast("🌑 Modo Escuro Enabled", 2000);
         } else {
           DarkReader.disable();
-          sendToast("☀️ Dark Mode Disabled", 2000);
+          sendToast("☀️ Modo Escuro Disabled", 2000);
         }
       } else {
         console.error("DarkReader não está disponível");
-        sendToast("⚠️ Dark Mode não disponível. Recarregue a página.", 3000);
+        sendToast("⚠️ Modo Escuro não disponível. Recarregue a página.", 3000);
       }
     };
     
@@ -378,8 +378,7 @@ class Core {
   
   static setupMod() {
     const messages = [
-      "🔥 Games Destroyer On Top[Discord](https://discord.gg/gamesdest)!",
-      "🤍 Made by [@iUnknownBr](https://guns.lol/biscurim)."
+      "🤍 Versão Criada Por [@Biscurim](https://guns.lol/biscurim)."
     ];
     
     const originalFetch = window.fetch;
@@ -449,7 +448,7 @@ class Core {
       if (element) {
         element.click();
         if (element.textContent === "Mostrar resumo") {
-          sendToast("🎉 Exercise completed!", 3000);
+          sendToast("🎉 Exercicio completado!", 3000);
           playAudio("https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/4x5g14gj.wav");
         }
       }
