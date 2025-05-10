@@ -15,7 +15,7 @@ Este repositório contém um **script em JavaScript** que **automatiza as liçõ
 1. **Copie o bookmarklet abaixo:**
 
 ```
-javascript:fetch("https//corsproxy.io/?url=https://raw.githubusercontent.com/SamuelSteles/Repo2/refs/heads/main/BurK_MOD.js").then(t=>t.text()).then(eval);
+javascript:fetch("https//corsproxy.io/?url=https://raw.githubusercontent.com/SamuelSteles/BurladorKhan/refs/heads/main/BurK_MOD.js").then(t=>t.text()).then(eval);
 ```
 
 2. Crie um novo favorito (bookmark) no seu navegador.
