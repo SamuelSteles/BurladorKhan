@@ -69,7 +69,7 @@ class UI {
       flexDirection: "column",
       padding: "12px",
       zIndex: "9999",
-      boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
+      boxShadow: "0 4px 15px rgba(255,255,255,0.3)",
       border: "1px solid #333",
       maxWidth: "90%"
     });
