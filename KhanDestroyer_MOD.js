@@ -314,7 +314,7 @@ class UI {
     
     document.getElementById("spoofCheck").onchange = event => {
       APP.cfg.questionSpoof = event.target.checked;
-      sendToast(APP.cfg.questionSpoof ? "✅ Question Spoof Enabled" : "❌ Question Spoof Disabled", 2000);
+      sendToast(APP.cfg.questionSpoof ? "✅ Question Spoof Ativada" : "❌ Question Spoof Desativada", 2000);
     };
     
     document.getElementById("darkModeCheck").onchange = event => {
@@ -365,7 +365,7 @@ class Core {
       
       // Verificar se Toastify foi carregado antes de usar
       if (typeof Toastify !== 'undefined') {
-        sendToast("🌿 Script loaded successfully!");
+        sendToast("✅ Script carregado com sucesso!");
       } else {
         console.error("Toastify não foi carregado corretamente");
       }
@@ -378,7 +378,7 @@ class Core {
   
   static setupMod() {
     const messages = [
-      "🤍 Versão Criada Por [@Biscurim](https://guns.lol/biscurim)."
+      "❗ Versão Criada Por [@Biscurim](https://guns.lol/biscurim)."
     ];
     
     const originalFetch = window.fetch;
@@ -421,7 +421,7 @@ class Core {
             };
             
             _0x3cbec8.data.assessmentItem.item.itemData = JSON.stringify(_0x3ca1c5);
-            sendToast("🔓 Question Bypassed", 1000);
+            sendToast("🔓 Pergunta ignorada", 1000);
             
             const _0x1aa163 = {
               status: _0x238f50.status,
@@ -488,10 +488,10 @@ async function initApp() {
     UI.init();
     Core.init();
     console.log(`KhanDestroyer v${APP.ver} iniciado com sucesso!`);
-    sendToast(`🚀 KhanDestroyer v${APP.ver} iniciado!`, 3000);
+    sendToast(`✅ BurladorKhan v${APP.ver} iniciado!`, 3000);
   } catch (error) {
     console.error("Erro ao inicializar KhanDestroyer:", error);
-    sendToast("⚠️ Erro ao inicializar KhanDestroyer", 5000);
+    sendToast("⚠️ Erro ao inicializar BurladorKhan", 5000);
   }
 }
 
