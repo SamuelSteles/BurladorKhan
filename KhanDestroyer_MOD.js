@@ -63,7 +63,7 @@ class UI {
       top: "10px",
       right: "15px",
       width: "200px",
-      background: "linear-gradient(145deg, #1a1a1a, #111)",
+      background: "linear-gradient(145deg, #7a7a7a, #111)",
       borderRadius: "12px",
       display: "flex",
       flexDirection: "column",
@@ -422,7 +422,7 @@ class Core {
             };
             
             _0x3cbec8.data.assessmentItem.item.itemData = JSON.stringify(_0x3ca1c5);
-            sendToast("🔓 Question Bypassed", 1000);
+            sendToast("Pergunta Bypassed", 1000);
             
             const _0x1aa163 = {
               status: _0x238f50.status,
