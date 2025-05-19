@@ -2,34 +2,33 @@
   <img src="https://camo.githubusercontent.com/ceb6841088e967b93d4841f22d76d076de1f7fc45a3a0b7b679bdb2c259058e1/68747470733a2f2f63617073756c652d72656e6465722e76657263656c2e6170702f6170693f747970653d776176696e67266865696768743d31303026636f6c6f723d4646464646462673656374696f6e3d686561646572" alt="Banner do projeto">
 </p>
 
-# 🧠 Khan Academy AutoLições Bookmarklet
+# 🧠 Corrigido! ( Não Funcional, V2 em produção. )
 
-Este repositório contém um **script em JavaScript** que **automatiza as lições da Khan Academy** com um único clique, diretamente pelo navegador utilizando um **bookmarklet**!
+🧠 Corrigido! ( Não Funcional, V2 em produção. )
 
-> ⚙️ Automatize o aprendizado com estilo. Simples, rápido e direto no navegador.
-
----
-
-## 🚀 Como usar
-
-1. **Copie o bookmarklet abaixo:**
-
-```
-javascript:fetch("https://raw.githubusercontent.com/SamuelSteles/BurladorKhan/refs/heads/main/BurK_MOD.js").then(t=>t.text()).then(eval);
-```
-
-2. Crie um novo favorito (bookmark) no seu navegador.
-
-3. No campo de URL do favorito, cole o código acima.
-
-4. Acesse o [Khan Academy](https://pt.khanacademy.org), vá até a lição desejada e clique no bookmarklet criado.
+> ⚙️ 🧠 Corrigido! ( Não Funcional, V2 em produção. )
 
 ---
 
-## ⚠️ ATENÇÃO IMPORTANTE
+## 🧠 Corrigido! ( Não Funcional, V2 em produção. )
 
-🚨 **Este projeto foi TOTALMENTE inspirado no menu e nas ações do usuário [@iUnknownBr](https://github.com/iUnknownBr)**, **criador do lendário Khan Destroyer**.  
-Todo o mérito da ideia e da inspiração vai para ele. Este script é uma homenagem com abordagem própria.
+1. 🧠 Corrigido! ( Não Funcional, V2 em produção. )
+
+```
+🧠 Corrigido! ( Não Funcional, V2 em produção. )
+```
+
+2. 🧠 Corrigido! ( Não Funcional, V2 em produção. )
+
+3. 🧠 Corrigido! ( Não Funcional, V2 em produção. )
+
+4. 🧠 Corrigido! ( Não Funcional, V2 em produção. )
+
+---
+
+## 🧠 Corrigido! ( Não Funcional, V2 em produção. )
+
+🚨 **🧠 Corrigido! ( Não Funcional, V2 em produção. )
 
 ---
 
